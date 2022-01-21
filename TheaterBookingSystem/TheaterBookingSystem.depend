@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1642416730 source:c:\projects\theaterbookingsystem\main.cpp
+	<iostream>
+	"Event.h"
+
+1642416685 c:\projects\theaterbookingsystem\include\event.h
+

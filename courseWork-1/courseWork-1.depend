@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1642480084 source:c:\projects\coursework-1\testclass.cpp
+	"TestClass.h"
+
+1642480083 c:\projects\coursework-1\testclass.h
+
+1642499396 source:c:\projects\coursework-1\event.cpp
+	"Event.h"
+
+1642671611 c:\projects\coursework-1\event.h
+	<string>
+
+1642496786 source:c:\projects\coursework-1\event1.cpp
+	"Event1.h"
+
+1642496816 c:\projects\coursework-1\event1.h
+	<string>
+
+1642676032 source:c:\projects\coursework-1\main.cpp
+	<iostream>
+	"Event.h"
+	"Film.h"
+	"StandupComedy.h"
+	<string>
+	"TheaterBooking.h"
+
+1642498856 source:c:\projects\coursework-1\film.cpp
+	"Film.h"
+
+1642671637 c:\projects\coursework-1\film.h
+	<string>
+	"Event.h"
+
+1642501842 source:c:\projects\coursework-1\person.cpp
+	"Person.h"
+
+1642516688 c:\projects\coursework-1\person.h
+	<string>
+	"Person.h"
+
+1642503005 source:c:\projects\coursework-1\employee.cpp
+	"Employee.h"
+
+1642516724 c:\projects\coursework-1\employee.h
+	<string>
+	"Person.h"
+
+1642519285 source:c:\projects\coursework-1\standupcomedy.cpp
+	"StandupComedy.h"
+
+1642519493 c:\projects\coursework-1\standupcomedy.h
+	"StandupComedy.h"
+	"Event.h"
+
+1642676561 c:\projects\coursework-1\theaterbooking.h
+	"Event.h"
+
+1642684172 source:c:\projects\coursework-1\theaterbooking.cpp
+	"TheaterBooking.h"
+	<string>
+	"Event.h"
+	<iostream>
+	<fstream>
+	"Film.h"
+	"StandupComedy.h"
+	"LiveMusic.h"
+
+1642681040 source:c:\projects\coursework-1\livemusic.cpp
+	"LiveMusic.h"
+
+1642681195 c:\projects\coursework-1\livemusic.h
+	"Event.h"
+
