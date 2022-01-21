@@ -35,7 +35,7 @@ int main()
 
  TheaterBooking t;
    // int ch;
-    t.menu();
+    t.mainMenu();
 //    cout << "Please enter the choice" <<endl;
 //    cin>> ch;
 //    switch(ch){

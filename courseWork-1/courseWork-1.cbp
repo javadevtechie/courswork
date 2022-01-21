@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Cusotmer.cpp" />
+		<Unit filename="Cusotmer.h" />
 		<Unit filename="Event.cpp" />
 		<Unit filename="Event.h" />
 		<Unit filename="Film.cpp" />

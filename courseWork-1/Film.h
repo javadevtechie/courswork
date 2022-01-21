@@ -9,7 +9,7 @@ using namespace std;
 class Film : public Event
 {
 private:
-    string typeOfEvent;
+    string filmType;//2DOr3D
 public:
     Film();
 };

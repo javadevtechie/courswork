@@ -6,6 +6,7 @@
 #include "Film.h"
 #include "StandupComedy.h"
 #include "LiveMusic.h"
+#include "Cusotmer.h"
 using namespace std;
 TheaterBooking::TheaterBooking()
 {
@@ -60,7 +61,7 @@ void TheaterBooking::subMenu()
         addBooking(e1);
         break;
     }
-     case 3:
+    case 3:
     {
         cout <<"Enter Number of seats"<<endl;
         cout<< "Enter Event Name"<<endl;
@@ -83,6 +84,8 @@ void TheaterBooking::subMenu()
     }
     }
 }
+
+
 
 void TheaterBooking::menu()
 {
@@ -145,5 +148,31 @@ void TheaterBooking::searchByEventName()
         }
     }
     MyReadFile.close();
+
+}
+
+void TheaterBooking::mainMenu()
+{
+    cout<<"Welcome to Theater Booking system"<<endl;
+    cout<<" 1. Staff \n 2. Customer "<<endl;
+    cout<<"Please enter the choice"<<endl;
+    int ch;
+    cin>>ch;
+    switch(ch)
+    {
+    case 1:
+        menu();
+        break;
+    case 2:
+        listOfAllEvents();
+
+
+        Cusotmer c1;
+        c1.bookAnEvent();
+        break;
+    }
+
+
+
 
 }

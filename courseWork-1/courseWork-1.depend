@@ -16,7 +16,7 @@
 1642496816 c:\projects\coursework-1\event1.h
 	<string>
 
-1642676032 source:c:\projects\coursework-1\main.cpp
+1642752170 source:c:\projects\coursework-1\main.cpp
 	<iostream>
 	"Event.h"
 	"Film.h"
@@ -27,7 +27,7 @@
 1642498856 source:c:\projects\coursework-1\film.cpp
 	"Film.h"
 
-1642671637 c:\projects\coursework-1\film.h
+1642752419 c:\projects\coursework-1\film.h
 	<string>
 	"Event.h"
 
@@ -52,10 +52,11 @@
 	"StandupComedy.h"
 	"Event.h"
 
-1642676561 c:\projects\coursework-1\theaterbooking.h
+1642767330 c:\projects\coursework-1\theaterbooking.h
 	"Event.h"
+	"Film.h"
 
-1642684172 source:c:\projects\coursework-1\theaterbooking.cpp
+1642767322 source:c:\projects\coursework-1\theaterbooking.cpp
 	"TheaterBooking.h"
 	<string>
 	"Event.h"
@@ -64,10 +65,24 @@
 	"Film.h"
 	"StandupComedy.h"
 	"LiveMusic.h"
+	"Cusotmer.h"
 
 1642681040 source:c:\projects\coursework-1\livemusic.cpp
 	"LiveMusic.h"
 
 1642681195 c:\projects\coursework-1\livemusic.h
 	"Event.h"
+
+1642766998 c:\projects\coursework-1\cusotmer.h
+	<string>
+	<iostream>
+	<fstream>
+
+1642767252 source:c:\projects\coursework-1\cusotmer.cpp
+	"Cusotmer.h"
+	"TheaterBooking.h"
+	<string>
+	<iostream>
+	<fstream>
+	"Cusotmer.h"
 
