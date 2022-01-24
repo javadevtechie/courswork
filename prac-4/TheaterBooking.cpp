@@ -7,8 +7,6 @@
 #include "StandupComedy.h"
 #include "LiveMusic.h"
 #include "Cusotmer.h"
-#include "TheaterUtility.h"
-#include<bits/stdc++.h>
 using namespace std;
 TheaterBooking::TheaterBooking()
 {
@@ -16,18 +14,19 @@ TheaterBooking::TheaterBooking()
 
 void TheaterBooking::subMenu()
 {
-    TheaterUtility tu;
-    string eventStartDate,eventEndDate,eventName,seats;
-    int ch=0;
+    int ch,seats;
+    string eventStartDate,eventEndDate,eventName;
     cout <<" 1. Film \n 2. StandUp Comedy \n 3. Live Music"<<endl;
-    ch=tu.getInputForInt(ch,"Please enter the choice: ");
+    cout <<" Please enter the choice" << endl;
+    cin >> ch;
     switch(ch)
     {
     case 1:
     {
-        eventName=tu.getInputForString(eventName,"Please enter Event Name: ");
-        seats=tu.getInputForInt(ch,"Enter No.of seats: ");
-        //cin >>seats;
+        cout<< "Enter Event Name"<<endl;
+        cin>>eventName;
+        cout <<"Enter Number of seats"<<endl;
+        cin >>seats;
         cout <<"Enter Event Start Date"<<endl;
         cin >>eventStartDate;
         cout <<"Enter Event EndDate"<<endl;
@@ -38,45 +37,49 @@ void TheaterBooking::subMenu()
         e1.seteventStartDate(eventStartDate);
         e1.seteventEndDate(eventEndDate);
         e1.settypeOfEvent("Film");
-        e1.setnumberOfSeats(seats);
+        e1.setnumberOfSeats(std::to_string(seats));
         e1.setfilmType("2D");
         addBooking(e1);
         break;
     }
     case 2:
     {
-       eventName=tu.getInputForString(eventName,"Please enter Event Name: ");
-        seats=tu.getInputForInt(ch,"Enter No.of seats: ");
+        cout<< "Enter Event Name"<<endl;
+        cin>>eventName;
+        cout <<"Enter Number of seats"<<endl;
+        cin >>seats;
         cout <<"Enter Event Start Date"<<endl;
         cin >>eventStartDate;
         cout <<"Enter Event EndDate"<<endl;
         cin >>eventEndDate;
         StandupComedy e1;
         e1.seteventName(eventName);
-        e1.seteventId(rand());
+        e1.seteventId(343);
         e1.seteventStartDate(eventStartDate);
         e1.seteventEndDate(eventEndDate);
         e1.settypeOfEvent("StandupComedy");
-        e1.setnumberOfSeats( seats);
+        e1.setnumberOfSeats(std::to_string(seats));
         addBooking(e1);
         break;
     }
     case 3:
     {
-
-        eventName=tu.getInputForString(eventName,"Please enter Event Name: ");
-        seats=tu.getInputForInt(ch,"Enter No.of seats: ");
+        cout <<"Enter Number of seats"<<endl;
+        cout<< "Enter Event Name"<<endl;
+        cin>>eventName;
+        cout <<"Enter Number of seats"<<endl;
+        cin >>seats;
         cout <<"Enter Event Start Date"<<endl;
         cin >>eventStartDate;
         cout <<"Enter Event EndDate"<<endl;
         cin >>eventEndDate;
         LiveMusic e1;
         e1.seteventName(eventName);
-        e1.seteventId(rand());
+        e1.seteventId(343);
         e1.seteventStartDate(eventStartDate);
         e1.seteventEndDate(eventEndDate);
         e1.settypeOfEvent("LiveMusic");
-        e1.setnumberOfSeats( seats);
+        e1.setnumberOfSeats(std::to_string(seats));
         addBooking(e1);
         break;
     }
@@ -87,13 +90,14 @@ void TheaterBooking::subMenu()
 
 void TheaterBooking::menu()
 {
-    TheaterUtility tu;
     int ch;
+    cout <<"Welcome to Event Management System"<<endl;
     do
     {
         cout <<" 1. Add a booking for an event \n 2. Cancel/Refund a booking \n 3. List all events  \n 4. List details and availability of a given event \n  \n 6.Exit" <<endl;
-        //cout << "Please enter the choice" <<endl;
-        ch=tu.getInputForInt(ch,"Please enter the choice: ");
+
+        cout << "Please enter the choice" <<endl;
+        cin>> ch;
         switch(ch)
         {
         case 1:
@@ -124,10 +128,7 @@ void TheaterBooking::listOfAllEvents()
     ifstream MyReadFile("events.txt");
     while (getline (MyReadFile, myText))
     {
-
-
         cout << myText<<endl;
-
     }
     MyReadFile.close();
 
@@ -148,16 +149,16 @@ void TheaterBooking::searchByEventName()
         }
     }
     MyReadFile.close();
+
 }
 
 void TheaterBooking::mainMenu()
 {
-    TheaterUtility tu;
     cout<<"Welcome to Theater Booking system"<<endl;
     cout<<" 1. Staff \n 2. Customer "<<endl;
-    int ch=0;
-   // cin>>ch;
-    ch=tu.getInputForInt(ch,"Please enter the choice: ");
+    cout<<"Please enter the choice"<<endl;
+    int ch;
+    cin>>ch;
     switch(ch)
     {
     case 1:
@@ -165,6 +166,8 @@ void TheaterBooking::mainMenu()
         break;
     case 2:
         listOfAllEvents();
+
+
         Cusotmer c1;
         c1.bookAnEvent();
         break;

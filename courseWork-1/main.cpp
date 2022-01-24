@@ -3,54 +3,56 @@
 #include "Film.h"
 #include "StandupComedy.h"
 #include <string>
-
+#include<iomanip>
+#include<bits/stdc++.h>
 #include "TheaterBooking.h"
 using namespace std;
 
-void mainMenu()
+template <typename T>
+void getChoice(T& choice , const string message)
 {
-    cout <<"Welcome to Event Management System"<<endl;
-    cout <<" 1. Add a booking for an event \n 2. Cancel/Refund a booking \n 3. List all events  \n 4. List details and availability of a given event \n 5. load data from a file \n 6. Same data to file" <<endl;
 
-}
-void subMenu()
-{
-    int ch,seats;
-    cout <<" 1. Film \n 2. StandUp Comedy \n 3. Live Music"<<endl;
-    cout <<" Please enter the choice" << endl;
-    cin >> ch;
-    switch(ch)
+    cout<< message;
+    cin>>  choice;
+    while(!cin.good())
     {
-    case 1:
-        cout <<"Enter Number of seats"<<endl;
-        cin >>seats;
-
+        cout<<"ERROR: Faulty Input! try again .."<<"\n";
+        cin.clear();
+        cin.ignore(INT_MAX, '\n');
+        cout<< "Enter Choice ";
+        cin>> choice;
     }
-
+    cin.clear();
+    cin.ignore(INT_MAX, '\n');
 }
+
 int main()
 {
-
-
-
- TheaterBooking t;
-   // int ch;
-    t.mainMenu();
-//    cout << "Please enter the choice" <<endl;
-//    cin>> ch;
-//    switch(ch){
-//    case 1:
-//        subMenu();
-//        break;
+//    int ch;
+//    string name;
 //
+//    string eventStartDate,eventEndDate,eventName,seats;
+//    cout <<" 1. Film \n 2. StandUp Comedy \n 3. Live Music"<<endl;
+//    getChoice(name, "Please enter the name:");
+//    cout<< "name:"<<name;
+//
+//
+//    getChoice(ch,"Please enter the choice: " );
+//    switch(ch)
+//    {
+//    case 1:
+//    {
+//        cout<<"Case 1";
+//        break;
 //    }
-
-
-
-//    t.addBooking(e1);
-//    t.listOfAllEvents();
-//    t.searchByEventName("ev3");
-
+//    case 2:
+//    {
+//        cout<<"Case 2";
+//        break;
+//    }
+//    }
+ TheaterBooking t;
+    t.mainMenu();
 
 }
 
