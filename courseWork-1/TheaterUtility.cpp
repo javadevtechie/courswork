@@ -11,7 +11,7 @@ int TheaterUtility::getInputForChoice(int choice,int maxChoice, string message)
 {
     cout<< message;
     cin>>  choice;
-    while(!cin.good())
+    while(!cin.good() ||  (choice>=maxChoice))
     {
         cout<<"ERROR: Faulty Input! try again .."<<"\n";
         cin.clear();

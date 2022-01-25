@@ -18,7 +18,7 @@ void Customer::menu()
     do
     {
         cout<<" 1. List of Available events \n 2. My Bookings \n 3.Exit "<<endl;
-        ch=tu.getInputForInt(ch,"Please enter the choice: ");
+        ch=tu.getInputForChoice(ch,4,"Please enter the choice: ");
         switch(ch)
         {
         case 1:
@@ -28,9 +28,13 @@ void Customer::menu()
         case 2:
             mybookings();
             break;
+
+        case 3:
+            tb.mainMenu();
+            break;
         }
     }
-    while(ch!=3);
+    while(ch!=4);
 
 }
 

@@ -7,8 +7,8 @@ class TheaterBooking
 public:
     TheaterBooking();
     void mainMenu();
-    void menu();
     void subMenu();
+    void subSubMenu();
     void addBooking(Event e);
     void listOfAllEvents();
     void searchByEventName();
@@ -19,6 +19,9 @@ public:
     void updateBooking(int bookingId,string status);
     void updateEvent(string eventId,string seats);
     string getEventByid(string eventId);
+    void addFilmEvent();
+    void addStandUpComedy();
+    void addLiveMusic();
 protected:
 
 private:
