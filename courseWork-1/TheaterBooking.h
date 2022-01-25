@@ -12,7 +12,10 @@ public:
     void addBooking(Event e);
     void listOfAllEvents();
     void searchByEventName();
-
+    void listOfAllbookedEvents();
+    void actionOnBooking();
+    bool isValidBookingId(string bookingId);
+    string getBookingById(string bookingId);
 protected:
 
 private:

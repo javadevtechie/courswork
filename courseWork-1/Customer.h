@@ -1,17 +1,18 @@
-#ifndef CUSOTMER_H
-#define CUSOTMER_H
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
 #include <string>
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-class Cusotmer
+class Customer
 {
     public:
-        Cusotmer();
+        Customer();
 
-
+        string GetbookingId() { return bookingId; }
+        void SetbookingId(string val) { bookingId = val; }
         string GeteventID() { return eventID; }
         void SeteventID(string val) { eventID = val; }
         string GeteventName() { return eventName; }
@@ -26,11 +27,14 @@ class Cusotmer
         void Setstatus(string val) { status = val; }
 
         void bookAnEvent();
-        bool isValidEventId(string eventId);
+        void menu();
+        void mybookings();
+
 
     protected:
 
     private:
+        string bookingId;
         string eventID;
         string eventName;
         string eventType;
