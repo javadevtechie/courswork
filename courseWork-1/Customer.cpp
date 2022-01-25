@@ -10,24 +10,27 @@ Customer::Customer()
 {
     //ctor
 }
-void Customer::menu(){
+void Customer::menu()
+{
     TheaterBooking tb;
     TheaterUtility tu;
-    cout<<" 1. List of Available events \n 2. My Bookings "<<endl;
-    int ch=0;
-   // cin>>ch;
-    ch=tu.getInputForInt(ch,"Please enter the choice: ");
-    switch(ch)
+     int ch=0;
+    do
     {
-    case 1:
-        tb.listOfAllEvents();
-        bookAnEvent();
-        break;
-    case 2:
-        mybookings();
-
-        break;
+        cout<<" 1. List of Available events \n 2. My Bookings \n 3.Exit "<<endl;
+        ch=tu.getInputForInt(ch,"Please enter the choice: ");
+        switch(ch)
+        {
+        case 1:
+            tb.listOfAllEvents();
+            bookAnEvent();
+            break;
+        case 2:
+            mybookings();
+            break;
+        }
     }
+    while(ch!=3);
 
 }
 
@@ -46,15 +49,16 @@ void Customer::bookAnEvent()
     c.SeteventName(e[1]);
     c.SetnoOfTicketsBooked(std::to_string(seats));
     c.SeteventType(e[5]);
-   // string rec=eventId+"|"+std::to_string(seats)+"|"+e[2]+"|"+e[5];
+    // string rec=eventId+"|"+std::to_string(seats)+"|"+e[2]+"|"+e[5];
     string record=c.GetbookingId()+"|"+c.GetdateOnBooked()+"|"+c.GeteventName()+"|"+c.GetnoOfTicketsBooked()+"|"+c.GeteventID()+"|"+"Pending\n";
     std::ofstream outfile;
     outfile.open("events_customer.txt", std::ios_base::app);
     outfile << record;
 }
-void Customer::mybookings(){
+void Customer::mybookings()
+{
 
-  string myText;
+    string myText;
     ifstream MyReadFile("events_customer.txt");
     while (getline (MyReadFile, myText))
     {

@@ -16,6 +16,9 @@ public:
     void actionOnBooking();
     bool isValidBookingId(string bookingId);
     string getBookingById(string bookingId);
+    void updateBooking(int bookingId,string status);
+    void updateEvent(string eventId,string seats);
+    string getEventByid(string eventId);
 protected:
 
 private:

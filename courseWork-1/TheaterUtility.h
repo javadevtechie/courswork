@@ -11,7 +11,7 @@ class TheaterUtility
 
     public:
         TheaterUtility();
-       int getInputForInt(int choice ,  string message);
+       int getInputForInt(int choice , int maxChoice, string message);
        string getInputForString(string choice ,  string message);
        string getInputForEventId(string eventId,string message);
        bool isValidEventId(string eventId);
@@ -22,6 +22,7 @@ class TheaterUtility
        vector <string> getEventById(string eventId);
        int getRand();
        bool isValidBookingId(string bookingId);
+       int getInputForChoice(int choice,string message);
 };
 
 #endif // THEATERUTILITY_H

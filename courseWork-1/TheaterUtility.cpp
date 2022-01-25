@@ -7,7 +7,22 @@ TheaterUtility::TheaterUtility()
 {
 
 }
-
+int TheaterUtility::getInputForChoice(int choice,int maxChoice, string message)
+{
+    cout<< message;
+    cin>>  choice;
+    while(!cin.good())
+    {
+        cout<<"ERROR: Faulty Input! try again .."<<"\n";
+        cin.clear();
+        cin.ignore(INT_MAX, '\n');
+        cout<< message ;
+        cin>> choice;
+    }
+    cin.clear();
+    cin.ignore(INT_MAX, '\n');
+    return choice;
+}
 int TheaterUtility::getInputForInt(int choice, string message)
 {
     cout<< message;
@@ -117,7 +132,7 @@ int TheaterUtility:: getInputForSeats(string eventId,int seats,string message)
 {
     seats=getInputForInt(seats,"Enter No.of seats:");
     vector<string> token=getEventById(eventId);
-    while(std::stoi(token[4])<seats)
+    while(std::stoi(token[5])<seats)
     {
         cout<<"Entered seats are more than available seats \n";
         seats=getInputForInt(seats,"Enter No.of seats: ");

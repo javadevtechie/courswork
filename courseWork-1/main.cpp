@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 
-
+    cout<<"Welcome to Theater Booking system"<<endl;
     TheaterBooking t;
     t.mainMenu();
     return 0;
