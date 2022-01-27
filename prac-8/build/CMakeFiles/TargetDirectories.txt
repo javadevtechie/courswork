@@ -1,0 +1,7 @@
+C:/projects/prac-8/build/CMakeFiles/app.dir
+C:/projects/prac-8/build/CMakeFiles/edit_cache.dir
+C:/projects/prac-8/build/CMakeFiles/rebuild_cache.dir
+C:/projects/prac-8/build/tests/CMakeFiles/myExecutable.dir
+C:/projects/prac-8/build/tests/CMakeFiles/tests.dir
+C:/projects/prac-8/build/tests/CMakeFiles/edit_cache.dir
+C:/projects/prac-8/build/tests/CMakeFiles/rebuild_cache.dir

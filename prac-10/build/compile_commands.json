@@ -1,0 +1,82 @@
+[
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\main.cpp.obj -c C:\\projects\\prac-10\\main.cpp",
+  "file": "C:/projects/prac-10/main.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\Event.cpp.obj -c C:\\projects\\prac-10\\Event.cpp",
+  "file": "C:/projects/prac-10/Event.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\Film.cpp.obj -c C:\\projects\\prac-10\\Film.cpp",
+  "file": "C:/projects/prac-10/Film.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\TheaterBooking.cpp.obj -c C:\\projects\\prac-10\\TheaterBooking.cpp",
+  "file": "C:/projects/prac-10/TheaterBooking.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\StandupComedy.cpp.obj -c C:\\projects\\prac-10\\StandupComedy.cpp",
+  "file": "C:/projects/prac-10/StandupComedy.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\LiveMusic.cpp.obj -c C:\\projects\\prac-10\\LiveMusic.cpp",
+  "file": "C:/projects/prac-10/LiveMusic.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\TheaterUtility.cpp.obj -c C:\\projects\\prac-10\\TheaterUtility.cpp",
+  "file": "C:/projects/prac-10/TheaterUtility.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\Customer.cpp.obj -c C:\\projects\\prac-10\\Customer.cpp",
+  "file": "C:/projects/prac-10/Customer.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\test.cpp.obj -c C:\\projects\\prac-10\\test\\test.cpp",
+  "file": "C:/projects/prac-10/test/test.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\TheaterUtility.cpp.obj -c C:\\projects\\prac-10\\TheaterUtility.cpp",
+  "file": "C:/projects/prac-10/TheaterUtility.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\Customer.cpp.obj -c C:\\projects\\prac-10\\Customer.cpp",
+  "file": "C:/projects/prac-10/Customer.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\TheaterBooking.cpp.obj -c C:\\projects\\prac-10\\TheaterBooking.cpp",
+  "file": "C:/projects/prac-10/TheaterBooking.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\Event.cpp.obj -c C:\\projects\\prac-10\\Event.cpp",
+  "file": "C:/projects/prac-10/Event.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\Film.cpp.obj -c C:\\projects\\prac-10\\Film.cpp",
+  "file": "C:/projects/prac-10/Film.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\LiveMusic.cpp.obj -c C:\\projects\\prac-10\\LiveMusic.cpp",
+  "file": "C:/projects/prac-10/LiveMusic.cpp"
+},
+{
+  "directory": "C:/projects/prac-10/build/test",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe   -g -o CMakeFiles\\course-work-test.dir\\__\\StandupComedy.cpp.obj -c C:\\projects\\prac-10\\StandupComedy.cpp",
+  "file": "C:/projects/prac-10/StandupComedy.cpp"
+}
+]

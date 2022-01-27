@@ -23,6 +23,7 @@ public:
     int getRand();
     bool isValidBookingId(string bookingId);
     int getInputForChoice(int choice,int maxChoice, string message);
+    string datepicker(string message);
 };
 
 #endif // THEATERUTILITY_H

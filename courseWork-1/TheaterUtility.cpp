@@ -1,8 +1,13 @@
 #include "TheaterUtility.h"
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <sstream>
+#include <iterator>
 #include <string>
 #include <iostream>
 #include "Customer.h"
+#include <ctime>
 TheaterUtility::TheaterUtility()
 {
 
@@ -15,12 +20,12 @@ int TheaterUtility::getInputForChoice(int choice,int maxChoice, string message)
     {
         cout<<"ERROR: Faulty Input! try again .."<<"\n";
         cin.clear();
-        cin.ignore(INT_MAX, '\n');
+        cin.ignore(9999, '\n');
         cout<< message ;
         cin>> choice;
     }
     cin.clear();
-    cin.ignore(INT_MAX, '\n');
+    cin.ignore(9999, '\n');
     return choice;
 }
 int TheaterUtility::getInputForInt(int choice, string message)
@@ -31,12 +36,12 @@ int TheaterUtility::getInputForInt(int choice, string message)
     {
         cout<<"ERROR: Faulty Input! try again .."<<"\n";
         cin.clear();
-        cin.ignore(INT_MAX, '\n');
+        cin.ignore(9999, '\n');
         cout<< message ;
         cin>> choice;
     }
     cin.clear();
-    cin.ignore(INT_MAX, '\n');
+    cin.ignore(9999, '\n');
     return choice;
 }
 string TheaterUtility::getInputForString(string input, string message)
@@ -48,12 +53,12 @@ string TheaterUtility::getInputForString(string input, string message)
     {
         cout<<"ERROR: Faulty Input! try again .."<<"\n";
         cin.clear();
-        cin.ignore(INT_MAX, '\n');
+        cin.ignore(9999, '\n');
         cout<< "Enter input ";
         cin>> input;
     }
     cin.clear();
-    cin.ignore(INT_MAX, '\n');
+    cin.ignore(9999, '\n');
     return input;
 }
 string TheaterUtility::getInputForEventId(string eventId,string message)
@@ -65,12 +70,12 @@ string TheaterUtility::getInputForEventId(string eventId,string message)
     {
         cout<<"ERROR: invalid eventId! try again .."<<"\n";
         cin.clear();
-        cin.ignore(INT_MAX, '\n');
+        cin.ignore(9999, '\n');
         cout<<"Enter Event Id: ";
         cin>> eventId;
     }
     cin.clear();
-    cin.ignore(INT_MAX, '\n');
+    cin.ignore(9999, '\n');
     return eventId;
 }
 bool TheaterUtility::isValidEventId(string eventId)
@@ -144,4 +149,24 @@ int TheaterUtility:: getRand()
 {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
     return std::rand() ;
+}
+string TheaterUtility::datepicker(string message)
+{
+    cout<< message<<endl;
+    int day,month,year;
+    bool flag;
+   // cout <<((day>0 && day<31) || (month>0 && month<13) || (year>2001 && year<2023));
+    do
+    {
+        day=getInputForInt(day,"Enter the Day: ");
+        month =getInputForInt(day,"Enter the Month: ");
+        year =getInputForInt(day,"Enter the Year: ");
+        if(day>0 && day<31 && month>0 && month<13 && year>2001 && year<2022)
+        {
+
+            flag=false;
+        }
+    }while(flag);
+
+    return std::to_string(day)+"/"+std::to_string(month)+"/"+std::to_string(year);
 }

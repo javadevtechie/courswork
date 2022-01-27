@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/projects/du/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -o CMakeFiles\\app.dir\\main.cpp.obj -c C:\\projects\\du\\main.cpp",
+  "file": "C:/projects/du/main.cpp"
+}
+]

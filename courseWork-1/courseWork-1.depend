@@ -16,7 +16,7 @@
 1642496816 c:\projects\coursework-1\event1.h
 	<string>
 
-1643122590 source:c:\projects\coursework-1\main.cpp
+1643296402 source:c:\projects\coursework-1\main.cpp
 	<iostream>
 	"TheaterBooking.h"
 	<iostream>
@@ -58,7 +58,7 @@
 	"Event.h"
 	"Film.h"
 
-1643133633 source:c:\projects\coursework-1\theaterbooking.cpp
+1643296900 source:c:\projects\coursework-1\theaterbooking.cpp
 	"TheaterBooking.h"
 	<string>
 	"Event.h"
@@ -69,7 +69,6 @@
 	"LiveMusic.h"
 	"Customer.h"
 	"TheaterUtility.h"
-	<bits/stdc++.h>
 	<regex>
 
 1642681040 source:c:\projects\coursework-1\livemusic.cpp
@@ -78,7 +77,7 @@
 1642681195 c:\projects\coursework-1\livemusic.h
 	"Event.h"
 
-1643107046 c:\projects\coursework-1\customer.h
+1643138628 c:\projects\coursework-1\customer.h
 	<string>
 	<iostream>
 	<fstream>
@@ -92,14 +91,19 @@
 	"Customer.h"
 	"TheaterUtility.h"
 
-1643132256 source:c:\projects\coursework-1\theaterutility.cpp
+1643296876 source:c:\projects\coursework-1\theaterutility.cpp
 	"TheaterUtility.h"
-	<bits/stdc++.h>
+	<iostream>
+	<vector>
+	<algorithm>
+	<sstream>
+	<iterator>
 	<string>
 	<iostream>
 	"Customer.h"
+	<ctime>
 
-1643130509 c:\projects\coursework-1\theaterutility.h
+1643296917 c:\projects\coursework-1\theaterutility.h
 	<string>
 	<iostream>
 	<vector>

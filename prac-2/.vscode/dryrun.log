@@ -1,0 +1,8 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/projects/prac-2'
+g++ -c main.cpp
+g++ -c Event.cpp 
+g++ -c Film.cpp
+g++ main.o Event.o Film.o -o output
+make.exe: Leaving directory 'c:/projects/prac-2'
+ 

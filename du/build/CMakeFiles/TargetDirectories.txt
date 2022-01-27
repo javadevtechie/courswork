@@ -1,0 +1,3 @@
+C:/projects/du/build/CMakeFiles/app.dir
+C:/projects/du/build/CMakeFiles/edit_cache.dir
+C:/projects/du/build/CMakeFiles/rebuild_cache.dir

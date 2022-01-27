@@ -1,0 +1,15 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/projects/prac-8'
+g++ -c main.cpp
+g++ -c Event.cpp 
+ 
+g++ -c Film.cpp
+g++ -c TheaterBooking.cpp
+g++ -c StandupComedy.cpp
+g++ -c LiveMusic.cpp
+g++ -c TheaterUtility.cpp	
+g++ -c Customer.cpp
+g++ main.o Event.o Film.o TheaterBooking.o StandupComedy.o LiveMusic.o TheaterUtility.o Customer.o -o output
+rm -f *.o
+make.exe: Leaving directory 'c:/projects/prac-8'
+ 

@@ -1,0 +1,6 @@
+C:/projects/prac-10/build/CMakeFiles/app.dir
+C:/projects/prac-10/build/CMakeFiles/edit_cache.dir
+C:/projects/prac-10/build/CMakeFiles/rebuild_cache.dir
+C:/projects/prac-10/build/test/CMakeFiles/course-work-test.dir
+C:/projects/prac-10/build/test/CMakeFiles/edit_cache.dir
+C:/projects/prac-10/build/test/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libfoo.a CMakeFiles/foo.dir/TheaterUtility.cpp.obj CMakeFiles/foo.dir/test.cpp.obj CMakeFiles/foo.dir/Customer.cpp.obj CMakeFiles/foo.dir/TheaterBooking.cpp.obj CMakeFiles/foo.dir/Event.cpp.obj
+C:\MinGW\bin\ranlib.exe libfoo.a

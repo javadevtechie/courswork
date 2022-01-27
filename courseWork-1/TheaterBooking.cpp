@@ -8,7 +8,6 @@
 #include "LiveMusic.h"
 #include "Customer.h"
 #include "TheaterUtility.h"
-#include<bits/stdc++.h>
 #include <regex>
 using namespace std;
 TheaterBooking::TheaterBooking()
@@ -44,7 +43,6 @@ void TheaterBooking::subMenu()
     int ch;
 
     cout <<" 1. Add a booking for an event \n 2. Cancel/Refund a booking \n 3. List all events  \n 4. List details and availability of a given event \n 5. Exit" <<endl;
-    //cout << "Please enter the choice" <<endl;
     ch=tu.getInputForChoice(ch,6,"Please enter the choice: ");
     switch(ch)
     {
@@ -54,12 +52,15 @@ void TheaterBooking::subMenu()
     case 2:
         listOfAllbookedEvents();
         actionOnBooking();
+        subMenu();
         break;
     case 3:
         listOfAllEvents();
+        subMenu();
         break;
     case 4:
         searchByEventName();
+        subMenu();
         break;
     case 5:
         mainMenu();
@@ -72,36 +73,37 @@ void TheaterBooking::subSubMenu()
     TheaterUtility tu;
     string eventStartDate,eventEndDate,eventName,seats;
     int ch=0;
-do{
-    cout <<" 1. Film \n 2. StandUp Comedy \n 3. Live Music \n 4.Exit"<<endl;
-    ch=tu.getInputForChoice(ch,5,"Please enter the choice: ");
-    switch(ch)
+    do
     {
-    case 1:
-    {
-        addFilmEvent();
-        break;
-    }
-    case 2:
-    {
-        addStandUpComedy();
-        break;
-    }
-    case 3:
-    {
-        addLiveMusic();
-        break;
-    }
-    case 4:
-    {
-        subMenu();
-        break;
+        cout <<" 1. Film \n 2. StandUp Comedy \n 3. Live Music \n 4.Exit"<<endl;
+        ch=tu.getInputForChoice(ch,5,"Please enter the choice: ");
+        switch(ch)
+        {
+        case 1:
+        {
+            addFilmEvent();
+            break;
+        }
+        case 2:
+        {
+            addStandUpComedy();
+            break;
+        }
+        case 3:
+        {
+            addLiveMusic();
+            break;
+        }
+        case 4:
+        {
+            subMenu();
+            break;
 
-    }
+        }
 
+        }
     }
-}
-while(ch!=5);
+    while(ch!=5);
 }
 void TheaterBooking::addStandUpComedy()
 {
@@ -153,10 +155,9 @@ void TheaterBooking::addFilmEvent()
     int ch;
     eventName=tu.getInputForString(eventName,"Please enter Event Name: ");
     seats= std::to_string(tu.getInputForInt(ch,"Enter No.of seats: "));
-    cout <<"Enter Event Start Date :";
-    cin >>eventStartDate;
-    cout <<"Enter Event EndDate :";
-    cin >>eventEndDate;
+    eventStartDate=tu.datepicker("Enter Event Start date");
+    eventEndDate=tu.datepicker("Enter Event End date");
+
     Film e1;
     e1.seteventName(eventName);
     e1.seteventId(tu.getRand());
@@ -166,7 +167,7 @@ void TheaterBooking::addFilmEvent()
     e1.setnumberOfSeats(seats);
     e1.setfilmType("2D");
     addBooking(e1);
-cout<<"Event added successfully!"<<endl;
+    cout<<"Event added successfully!"<<endl;
 }
 
 void TheaterBooking::addBooking(Event e)
@@ -178,11 +179,22 @@ void TheaterBooking::addBooking(Event e)
 }
 void TheaterBooking::listOfAllEvents()
 {
+    const char separator    = ' ';
+    const int numWidth      = 13;
+    const int nameWidth=15;
     string myText;
+    TheaterUtility tu;
     ifstream MyReadFile("events.txt");
+    // cout<<left<<setw(nameWidth)<<setfill(separator)<<"Event Id"<<"Event Name"<<"Event Start"<<"Event End"<<"EventType"<<endl;
     while (getline (MyReadFile, myText))
     {
-        cout << myText<<endl;
+        vector <string> token=tu.getStringToken(myText);
+        for(int i=0 ; i <5; i++)
+        {
+            cout<<token[i]<< "  ";
+            // cout << left << setw(numWidth) << setfill(separator) << token[i];
+        }
+        cout<<endl;
     }
     MyReadFile.close();
 
@@ -232,15 +244,14 @@ void TheaterBooking::actionOnBooking()
     }
     else if (id==1)
     {
-        //  tb.updateBooking(bookingId,"Confirmed");
+        tb.updateBooking(bookingId,"Confirmed");
         string bookingRec=tb.getBookingById(std::to_string(bookingId));
         vector<string> token= tu.getStringToken(bookingRec);
         string eventId=token[4];
         string seats=token[3];
         tb.updateEvent(eventId,seats);
+        tb.subMenu();
     }
-
-
 }
 bool TheaterBooking::isValidBookingId(string bookingId)
 {
@@ -281,7 +292,6 @@ string TheaterBooking::getEventByid(string eventId)
     ifstream MyReadFile("events.txt");
     while (getline (MyReadFile, myText))
     {
-
         if (myText.find(eventId) != std::string::npos)
         {
             MyReadFile.close();
@@ -326,10 +336,8 @@ void TheaterBooking::updateEvent(string eventId,string seats)
     string eventRec=tb.getEventByid(eventId);
     vector <string> token=tu.getStringToken(eventRec);
     int rem=std::stoi(token[5])-std::stoi(seats);
-
     string rec1=eventRec;
     eventRec.replace(eventRec.find("|"+token[5]), sizeof("|"+token[5]) - 1, std::to_string(rem));
-    cout<<eventRec;
 }
 
 
