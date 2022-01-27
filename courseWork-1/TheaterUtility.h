@@ -24,6 +24,7 @@ public:
     bool isValidBookingId(string bookingId);
     int getInputForChoice(int choice,int maxChoice, string message);
     string datepicker(string message);
+    string getTodayDate();
 };
 
 #endif // THEATERUTILITY_H

@@ -185,7 +185,7 @@ void TheaterBooking::listOfAllEvents()
     while (getline (MyReadFile, myText))
     {
         vector <string> token=tu.getStringToken(myText);
-        for(int i=0 ; i <5; i++)
+        for(int i=0 ; i <=5; i++)
         {
             cout<<token[i]<< "  ";
            // cout << left << setw(numWidth) << setfill(separator) << token[i];
@@ -237,6 +237,8 @@ void TheaterBooking::actionOnBooking()
     if(id==2)
     {
         tb.updateBooking(bookingId,"Cancel");
+        cout << "*Successfully Updated!*"<<endl;
+        tb.subMenu();
     }
     else if (id==1)
     {
@@ -246,7 +248,9 @@ void TheaterBooking::actionOnBooking()
         string eventId=token[4];
         string seats=token[3];
         tb.updateEvent(eventId,seats);
+        cout << "*Successfully Updated!*";
         tb.subMenu();
+         
     }
 }
 bool TheaterBooking::isValidBookingId(string bookingId)
@@ -327,13 +331,33 @@ void TheaterBooking::updateBooking(int bookingId,string status)
 }
 void TheaterBooking::updateEvent(string eventId,string seats)
 {
+   
     TheaterBooking tb;
     TheaterUtility tu;
     string eventRec=tb.getEventByid(eventId);
     vector <string> token=tu.getStringToken(eventRec);
     int rem=std::stoi(token[5])-std::stoi(seats);
     string rec1=eventRec;
-    eventRec.replace(eventRec.find("|"+token[5]), sizeof("|"+token[5]) - 1, std::to_string(rem));
+    eventRec.replace(eventRec.find("|"+token[5]), sizeof("|"+token[5]) - 1, "|"+std::to_string(rem));
+    string myText;
+    ifstream MyReadFile("events.txt");
+    std::ofstream outfile;
+    outfile.open("temp.txt", std::ios_base::app);
+    while (getline (MyReadFile, myText))
+    {
+        if (myText.find(rec1) != std::string::npos)
+        {
+            outfile<<eventRec<<endl;
+        }
+        else
+        {
+            outfile<<myText<<endl;
+        }
+    }
+    MyReadFile.close();
+    outfile.close();
+    remove("events.txt");
+    std::rename("temp.txt","events.txt");
 }
 
 

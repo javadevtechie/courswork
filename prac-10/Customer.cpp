@@ -42,14 +42,15 @@ void Customer::bookAnEvent()
 {
     TheaterUtility tu;
     Customer c;
-    string eventId;
+    string eventId,bookingId;
     int seats;
     eventId=tu.getInputForEventId(eventId,"Enter Event Id: ");
     seats=tu.getInputForSeats(eventId,seats,"Enter No.Of seats: ");
     vector<string> e= tu.getEventById(eventId);
     c.SeteventID(e[0]);
-    c.SetbookingId( std::to_string(tu.getRand()));
-    c.SetdateOnBooked("01/24/2022");
+    bookingId=std::to_string(tu.getRand());
+    c.SetbookingId(bookingId );
+   c.SetdateOnBooked(tu.getTodayDate());
     c.SeteventName(e[1]);
     c.SetnoOfTicketsBooked(std::to_string(seats));
     c.SeteventType(e[5]);
@@ -58,6 +59,7 @@ void Customer::bookAnEvent()
     std::ofstream outfile;
     outfile.open("events_customer.txt", std::ios_base::app);
     outfile << record;
+    cout <<"*Booking has been registerd! Booking Id: "+bookingId+"*" <<endl;
 }
 void Customer::mybookings()
 {

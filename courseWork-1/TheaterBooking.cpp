@@ -337,7 +337,27 @@ void TheaterBooking::updateEvent(string eventId,string seats)
     vector <string> token=tu.getStringToken(eventRec);
     int rem=std::stoi(token[5])-std::stoi(seats);
     string rec1=eventRec;
-    eventRec.replace(eventRec.find("|"+token[5]), sizeof("|"+token[5]) - 1, std::to_string(rem));
+    eventRec.replace(eventRec.find("|"+token[5]), sizeof("|"+token[5]) - 1, "|"+std::to_string(rem));
+
+    string myText;
+    ifstream MyReadFile("events.txt");
+    std::ofstream outfile;
+    outfile.open("temp.txt", std::ios_base::app);
+    while (getline (MyReadFile, myText))
+    {
+        if (myText.find(rec1) != std::string::npos)
+        {
+            outfile<<eventRec<<endl;
+        }
+        else
+        {
+            outfile<<myText<<endl;
+        }
+    }
+    MyReadFile.close();
+    outfile.close();
+    remove("events.txt");
+    std::rename("temp.txt","events.txt");
 }
 
 

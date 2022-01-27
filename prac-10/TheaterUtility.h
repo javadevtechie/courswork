@@ -25,6 +25,7 @@ public:
     int getInputForChoice(int choice,int maxChoice, string message);
     string getStrings();
     string datepicker(string message);
+        string getTodayDate();
 };
 
 #endif // THEATERUTILITY_H

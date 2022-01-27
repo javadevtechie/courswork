@@ -49,7 +49,7 @@ void Customer::bookAnEvent()
     vector<string> e= tu.getEventById(eventId);
     c.SeteventID(e[0]);
     c.SetbookingId( std::to_string(tu.getRand()));
-    c.SetdateOnBooked("01/24/2022");
+    c.SetdateOnBooked(tu.getTodayDate());
     c.SeteventName(e[1]);
     c.SetnoOfTicketsBooked(std::to_string(seats));
     c.SeteventType(e[5]);

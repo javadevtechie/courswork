@@ -155,7 +155,7 @@ string TheaterUtility::datepicker(string message)
     cout<< message<<endl;
     int day,month,year;
     bool flag;
-   // cout <<((day>0 && day<31) || (month>0 && month<13) || (year>2001 && year<2023));
+    // cout <<((day>0 && day<31) || (month>0 && month<13) || (year>2001 && year<2023));
     do
     {
         day=getInputForInt(day,"Enter the Day: ");
@@ -166,7 +166,15 @@ string TheaterUtility::datepicker(string message)
 
             flag=false;
         }
-    }while(flag);
+    }
+    while(flag);
 
     return std::to_string(day)+"/"+std::to_string(month)+"/"+std::to_string(year);
+}
+string TheaterUtility::getTodayDate()
+{
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    string currentDate=std::to_string(ltm->tm_mday) + "/" + std::to_string(1 + ltm->tm_mon)+"/"+std::to_string(1900 + ltm->tm_year);
+    return currentDate;
 }
